@@ -191,9 +191,9 @@ namespace Employee_Management_System.Service
 
         public async Task<List<EmployeeBasicDetailsDTO>> GetEmployeeByRole(string role)
         {
-            var allStudents = await GetAllEmployee();
+            var allEmploye = await GetAllEmployee();
 
-            var filteredList = allStudents.FindAll(a => a.Role == role);
+            var filteredList = allEmploye.FindAll(a => a.Role == role);
 
             return filteredList;
         }
